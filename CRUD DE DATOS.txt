@@ -1,0 +1,61 @@
+VER DATOS
+Probar el Endpoint GET /productos
+Abre Postman, selecciona el método GET.
+En el campo de URL, ingresa http://localhost:3000/productos.
+Haz clic en Send.
+
+
+AGREGAR DATOS
+Probar el Endpoint POST /productos
+Para agregar un nuevo producto desde Postman:
+
+Abre una nueva solicitud en Postman y selecciona el método POST.
+
+Ingresa la URL http://localhost:3000/productos.
+
+En la pestaña Body, selecciona raw y elige JSON en el menú desplegable.
+
+Ingresa el JSON para crear un producto, como:
+
+json
+Copiar código
+{
+  "nombre": "Producto D",
+  "descripcion": "Descripción del producto D",
+  "precio": 250.00,
+  "stock": 15
+}
+
+
+ELIMINAR DATOS
+Probar el Endpoint DELETE /productos/:id
+En Postman, abre una nueva solicitud y selecciona el método DELETE.
+En la URL, ingresa http://localhost:3000/productos/1 (reemplaza 1 por el id del producto que deseas eliminar).
+Haz clic en Send para enviar la solicitud.
+Si el producto se elimina correctamente, recibirás una respuesta JSON con un mensaje como:
+
+json
+Copiar código
+{
+  "mensaje": "Producto con id 1 eliminado exitosamente"
+}
+
+
+EDITAR DATOS
+Probar el Endpoint PUT /productos/:id
+En Postman, abre una nueva solicitud y selecciona el método PUT.
+
+En la URL, ingresa http://localhost:3000/productos/1 (reemplaza 1 con el id del producto que deseas editar).
+
+Ve a la pestaña Body, selecciona raw, y elige JSON en el menú desplegable.
+
+Ingresa el siguiente JSON con los nuevos datos del producto:
+
+json
+Copiar código
+{
+  "nombre": "Producto Editado",
+  "descripcion": "Descripción actualizada",
+  "precio": 300.00,
+  "stock": 25
+}
